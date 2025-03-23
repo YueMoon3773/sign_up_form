@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+
+    --left_side_width: 45%;
+    --left_padding: 10em;
+    --left_bg_rounded_radius: 20em;
+    --logo_size: 50%;
+    --logo_from_top: 20%;
+    --left_side_color: #d4aa87;
+
+    --right_side_color: #aa816c;
+    --right_side_shadow_color: #503d32;
+    --quote_bg_color: #9d7763;
+    --right_side_padding: 18em;
+    --right_heading_size: 2.4rem;
+
+    --btn_inp_radius: 1rem;
+    --btn_bg_color: #ffd0a5;
+    --btn_bg_hover_color: #ffe3b4;
+    --inp_border_color: #cca684;
+
+    --white_text: #fff9e3;
+    --black_text: #333;
+    --white_color: #fff;
+    --black_color: #000;
+}
+
+.main {
+    display: flex;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.left_wrapper {
+    max-width: var(--left_side_width);
+    padding: var(--left_padding);
+    background-color: var(--left_side_color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_wrapper {
+    height: 100%;
+    border-radius: var(--left_bg_rounded_radius);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.logo_wrapper {
+    position: absolute;
+    width: 100%;
+    top: var(--logo_from_top);
+    background-color: rgba(34, 34, 34, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.logo_img {
+    width: var(--logo_size);
+}
+
+.bg_img {
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+}
+
+.bg_img:hover {
+    transform: scale(1.25);
+}
+
+.right_wrapper {
+    flex: 1;
+    background-color: var(--right_side_color);
+    box-shadow: -3em 0 10em 3em var(--right_side_shadow_color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.intro {
+    background-color: var(--quote_bg_color);
+    width: 100%;
+    padding: var(--right_side_padding);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.intro_heading {
+    font-size: var(--right_heading_size);
+    color: var(--black_text);
+}
+
+.intro_para em {
+    font-size: 1.6rem;
+    color: var(--black_text);
+    text-align: justify;
+    line-height: 3rem;
+    width: clamp(45ch, 50%, 75ch);
+}
+
+.intro_auth {
+    margin-top: 0.6em;
+    text-align: right;
+    font-size: 1.6rem;
+    color: var(--black_text);
+    font-weight: 600;
+}
+
+.form {
+    width: 100%;
+    padding: calc(var(--right_side_padding) * 80 / 100) var(--right_side_padding);
+    background-color: var(--white_text);
+}
+
+.form_heading {
+    background-color: var(--white_text);
+    font-size: var(--right_heading_size);
+    color: var(--black_text);
+}
+
+.inputs_wrapper {
+    margin-top: 14em;
+    display: flex;
+    gap: 30em;
+}
+
+.left_inps,
+.right_inps {
+    flex: 1;
+}
+
+.form_label {
+    font-size: 1.6rem;
+    color: var(--black_text);
+    width: 100%;
+}
+
+.form_label_required {
+    font-size: 1.8rem;
+}
+
+.form_inp {
+    font-size: 1.6rem;
+    width: 90%;
+    height: 2.4em;
+    padding: 0.1em 0.6em;
+    margin-top: 0.4em;
+    border-radius: var(--btn_inp_radius);
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.form_inp:valid {
+    border-color: #98c379;
+}
+
+.form_inp:invalid {
+    border-color: #e06c69;
+}
+
+.form_inp:focus {
+    border-color: var(--inp_border_color);
+}
+
+.error_log {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 0.4em;
+    margin-bottom: 0.6em;
+    font-weight: 500;
+    color: red;
+    visibility: hidden;
+}
+
+.left_inps .error_log:last-child,
+.right_inps .error_log:last-child {
+    margin-bottom: 0;
+}
+
+.submit_wrapper {
+    width: 100%;
+    padding: 16em var(--right_side_padding);
+}
+
+.submit_btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black_text);
+    background-color: var(--btn_bg_color);
+    padding: 0.8em 1.4em;
+    border-radius: var(--btn_inp_radius);
+    border-color: transparent;
+}
+
+.submit_btn:hover {
+    background-color: var(--btn_bg_hover_color);
+}
+
+.had_acc {
+    font-size: 1.6rem;
+    margin-top: 1.4em;
+    font-weight: 500;
+    user-select: none;
+}
+
+.log_in {
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--btn_bg_color);
+    margin-left: 0.4em;
+}
+
+.log_in:hover {
+    color: var(--btn_bg_hover_color);
+}

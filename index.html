@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign up</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./asset/css/style.css" />
+
+        <script src="./asset/js/main.js" defer></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="left_wrapper">
+                <div class="bg_wrapper">
+                    <div class="logo_wrapper">
+                        <img src="./asset/img/logo_final.png" alt="Logo image" class="logo_img" />
+                    </div>
+                    <img src="./asset/img/bg.jpg" alt="background image" class="bg_img" />
+                </div>
+            </div>
+
+            <div class="right_wrapper">
+                <div class="intro">
+                    <h1 class="intro_heading">CAPTURE MOMENTS - CREATE MEMORIES</h1>
+                    <p class="intro_para">
+                        <em>
+                            Photography is a way of feeling, of touching, of loving. What you have caught on film is
+                            captured forever... It remembers little things, long after you have forgotten everything.
+                        </em>
+                    </p>
+                    <p class="intro_auth">-Aaron Siskind-</p>
+                </div>
+                <form action="" class="form">
+                    <h2 class="form_heading">Create an account</h2>
+                    <div class="inputs_wrapper">
+                        <div class="left_inps">
+                            <label for="user_name" class="form_label">You name is</label>
+                            <input
+                                type="text"
+                                class="form_inp"
+                                id="user_name"
+                                name="user_name"
+                                pattern="/\w*(\s)?/gm"
+                                placeholder="Eric Johnathan"
+                            />
+                            <span class="error_log usr_name_err">ERROR</span>
+
+                            <label for="email" class="form_label"
+                                >Your email<span class="form_label_required" aria-label="required">*</span></label
+                            >
+                            <input
+                                type="email"
+                                class="form_inp"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="your-email.here@example.eu.com"
+                                pattern="/^\w*((\-|\.|_)\w{1,})?((\-|\.|_)\w{1,})?@\w{1,10}((\-|\.|_)\w{1,9})?\.\w{1,6}(\.\w{1,6})?$/gm"
+                            />
+                            <span class="error_log email_err">ERROR</span>
+
+                            <label for="password" class="form_label"
+                                >Your password<span class="form_label_required" aria-label="required">*</span></label
+                            >
+                            <input
+                                type="password"
+                                class="form_inp"
+                                id="password"
+                                name="password"
+                                required
+                                pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/gm"
+                            />
+                            <span class="error_log password_err">ERROR</span>
+                        </div>
+
+                        <div class="right_inps">
+                            <label for="acc_name" class="form_label"
+                                >What will we call you?<span class="form_label_required" aria-label="required"
+                                    >*</span
+                                ></label
+                            >
+                            <input
+                                type="text"
+                                class="form_inp"
+                                id="acc_name"
+                                name="acc_name"
+                                required
+                                placeholder="eric24"
+                                pattern="/.*/gm"
+                            />
+                            <span class="error_log acc_name_err">ERROR</span>
+
+                            <label for="phone_number" class="form_label">Your phone number</label>
+                            <input
+                                type="text"
+                                class="form_inp"
+                                id="phone_number"
+                                name="phone_number"
+                                placeholder="0123456789"
+                                pattern="/\d{6,11}/gm"
+                            />
+                            <span class="error_log phone_number_err">ERROR</span>
+
+                            <label for="password_confirm" class="form_label"
+                                >Confirm your password<span class="form_label_required" aria-label="required"
+                                    >*</span
+                                ></label
+                            >
+                            <input
+                                type="password"
+                                class="form_inp"
+                                id="password_confirm"
+                                name="password_confirm"
+                                required
+                                pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/gm"
+                            />
+                            <span class="error_log password_confirm_err">ERROR</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="submit_wrapper">
+                    <button class="submit_btn" type="submit">Create an Account</button>
+                    <p class="had_acc">
+                        Already a member?
+                        <a href="" class="log_in">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
