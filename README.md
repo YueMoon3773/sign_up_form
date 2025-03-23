@@ -6,7 +6,7 @@ Welcome to **Sign Up Form** designed to let users create an account. The form co
 ## ✨ Features
 
 - **User Inputs**: Name, email, phone number, password, and confirm password fields..
-- **Basic Validation**: Ensures required fields are filled out and that each input should match its type.
+- **Basic Validation**: Ensures required fields are filled out and each input should match its type.
 - **Responsive Design**: Adapts to different screen sizes, providing a seamless user experience.
 - **Visual Appeal**: Uses imagery and color schemes to enhance user engagement.
 
@@ -24,7 +24,7 @@ Welcome to **Sign Up Form** designed to let users create an account. The form co
 - Integration Readiness: Create a sign-up component that can be integrated into larger projects or backend systems.
 ## 🌍 Live Demo
 
-Try out the calculator right away: [Live demo link](https://yuemoon3773.github.io/sign_up_form/)
+Try out the Sign-up Form right away: [Live demo link](https://yuemoon3773.github.io/sign_up_form/)
 
 
 ## 🚀 Future Improvements plan
